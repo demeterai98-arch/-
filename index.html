@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تأصيل العقارية</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: #000;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.nav-scrolled {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+}
+
+/* Reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s cubic-bezier(.2,.8,.2,1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero animation */
+.fade-up {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(30px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+/* Hover */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image zoom */
+.zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Smooth transitions */
+* {
+    transition: all .3s ease;
+}
+</style>
+</head>
+
+<body class="text-white">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed w-full z-50 py-6">
+<div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center">
+<i data-lucide="building-2"></i>
+</div>
+<span class="text-xl font-bold">تأصيل</span>
+</div>
+
+<div class="hidden md:flex gap-8 text-gray-300">
+<a href="#home">الرئيسية</a>
+<a href="#projects">مشاريعنا</a>
+<a href="#services">خدماتنا</a>
+</div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="h-screen flex items-center justify-center relative text-center">
+
+<img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9"
+class="absolute w-full h-full object-cover brightness-50">
+
+<div class="relative z-10 max-w-4xl">
+
+<h1 class="text-5xl md:text-7xl font-bold mb-6 fade-up">
+نؤصل لغدٍ <span class="text-yellow-500">أفضل</span>
+</h1>
+
+<p class="text-gray-300 mb-8 fade-up" style="animation-delay:0.2s;">
+اكتشف الفخامة مع تأصيل العقارية
+</p>
+
+<button class="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold hover:scale-105 fade-up" style="animation-delay:0.4s;">
+استكشف المشاريع
+</button>
+
+</div>
+</section>
+
+<!-- FEATURES -->
+<section id="services" class="py-24 bg-zinc-950">
+<div class="max-w-7xl mx-auto px-6 text-center">
+
+<h2 class="text-4xl font-bold mb-16 reveal">خدماتنا</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-zinc-900 p-8 rounded-2xl card reveal">
+<i data-lucide="shield-check" class="text-yellow-500 mb-4"></i>
+<h3 class="text-xl font-bold mb-2">موثوقية</h3>
+<p class="text-gray-400">استثمار آمن</p>
+</div>
+
+<div class="bg-zinc-900 p-8 rounded-2xl card reveal">
+<i data-lucide="building-2" class="text-yellow-500 mb-4"></i>
+<h3 class="text-xl font-bold mb-2">تصاميم</h3>
+<p class="text-gray-400">تصميم عصري</p>
+</div>
+
+<div class="bg-zinc-900 p-8 rounded-2xl card reveal">
+<i data-lucide="key" class="text-yellow-500 mb-4"></i>
+<h3 class="text-xl font-bold mb-2">إدارة</h3>
+<p class="text-gray-400">حلول متكاملة</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 bg-black">
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="text-4xl font-bold mb-16 reveal">مشاريعنا</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<div class="relative h-96 rounded-2xl overflow-hidden zoom reveal">
+<img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00" class="w-full h-full object-cover">
+<div class="absolute bottom-0 p-6 bg-black/60 w-full">
+<h3 class="font-bold">برج الرياض</h3>
+</div>
+</div>
+
+<div class="relative h-96 rounded-2xl overflow-hidden zoom reveal">
+<img src="https://images.unsplash.com/photo-1613490908592-fd5e16f22e4d" class="w-full h-full object-cover">
+<div class="absolute bottom-0 p-6 bg-black/60 w-full">
+<h3 class="font-bold">قصور جدة</h3>
+</div>
+</div>
+
+<div class="relative h-96 rounded-2xl overflow-hidden zoom reveal">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" class="w-full h-full object-cover">
+<div class="absolute bottom-0 p-6 bg-black/60 w-full">
+<h3 class="font-bold">واحة الأعمال</h3>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 bg-zinc-950 text-center">
+<p class="text-gray-500">© 2026 تأصيل العقارية</p>
+</footer>
+
+<script>
+// icons
+lucide.createIcons();
+
+// navbar scroll
+window.addEventListener('scroll', () => {
+const nav = document.getElementById('navbar');
+if(window.scrollY > 50){
+nav.classList.add('nav-scrolled');
+}else{
+nav.classList.remove('nav-scrolled');
+}
+});
+
+// reveal animation
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('active');
+}
+});
+},{threshold:0.1});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
